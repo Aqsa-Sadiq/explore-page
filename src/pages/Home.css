@@ -1,12 +1,26 @@
 
 
+/* Home section center */
+
+  .home {
+  display: flex;
+  flex-direction: column;  /* heading uper, cards neeche */
+  align-items: center;     /* center align everything */
+  text-align: center;
+  width: 100%;
+  }
+
+
+/* Cards grid */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  gap: 30px; 
-  margin: 20px auto;
-  max-width: 1200px; /* container width */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  
 }
+
 
 
 .card-link {
@@ -22,6 +36,7 @@
   transition: transform .18s ease, box-shadow .18s ease;
   display: flex;
   flex-direction: column;
+  width: 250px;
 }
 
 .card:hover {

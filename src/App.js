@@ -10,11 +10,14 @@ import Nature from './pages/Nature';
 import BuildingDetail from './pages/BuildingDetail';
 import TravelHero from './TravelHero';   
 import Footer from './Footer';
+import BottomBar from './BottomBar';
 
 export default function App() {
   return (
     <div className="app">
         <MainNavbar/>
+         <TravelHero />
+         <BottomBar/>
       <Navbar />
       <main className="app-main">
         <Routes>
@@ -26,7 +29,7 @@ export default function App() {
           <Route path="/nature" element={<Nature />} />
         </Routes>
 
-        <TravelHero />
+       
         <Footer />
       </main>
     </div>
