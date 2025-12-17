@@ -1,18 +1,18 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/layout/Navbar';
-import TravelHero from './components/layout/TravelHero';
-import BottomBar from './components/layout/BottomBar';
-import Navlinks from './components/Navlinks';
-import Footer from './components/layout/Footer';
+import Navbar from './layout/Navbar';
+import TravelHero from './layout/TravelHero';
+import BottomBar from './layout/BottomBar';
+import Navlinks from './layout/Navlinks';
+import Footer from './layout/Footer';
 
-import Home from './components/pages/Home';
-import Weather from './components/pages/Weather';
-import Building from './components/pages/Building';
-import BuildingDetail from './components/pages/BuildingDetail';
-import Nearby from './components/pages/Nearby';
-import Nature from './components/pages/Nature';
+import Home from './pages/Home';
+import Weather from './pages/Weather';
+import Building from './pages/Building';
+import BuildingDetail from './pages/BuildingDetail';
+import Nearby from './pages/Nearby';
+import Nature from './pages/Nature';
 
 export default function App() {
   return (

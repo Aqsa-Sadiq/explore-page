@@ -1,6 +1,7 @@
 // TravelHero.jsx
 import "./TravelHero.css";
-import mapVector from '../../assets/mapvector.jpg';
+import map from "../assets/mapvector.jpg";
+
 
 
 
@@ -16,7 +17,7 @@ export default function TravelHero() {
       </div>
 
       <div className="image-area">
-        <img src={mapVector} alt="Travel Map" />
+        <img src={map} alt="Travel Map" />
       </div>
     </section>
   );

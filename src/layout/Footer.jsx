@@ -2,7 +2,8 @@
 import "./footer.css";
 import { QrcodeOutlined } from "@ant-design/icons";
 import { Form, Input, Button } from "antd";
-import globe from '../../assets/globe.png';
+import globe from "../assets/globe.png";
+
 
 
 
