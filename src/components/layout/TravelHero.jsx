@@ -1,10 +1,11 @@
 // TravelHero.jsx
 import "./TravelHero.css";
-import planeImg from "./assets/mapvector.jpg";
+import mapVector from '../../assets/mapvector.jpg';
 
 
 
-// <-- replace with your image path
+
+
 
 export default function TravelHero() {
   return (
@@ -15,7 +16,7 @@ export default function TravelHero() {
       </div>
 
       <div className="image-area">
-        <img src={planeImg} alt="Travel Map" />
+        <img src={mapVector} alt="Travel Map" />
       </div>
     </section>
   );

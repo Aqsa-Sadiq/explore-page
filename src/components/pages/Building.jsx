@@ -32,54 +32,67 @@ export default function Building() {
   };
 
   return (
-    <section className="page container">
-      <h2 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '28px', fontWeight: '600', color: '#333' }}>
-        Hotels and Stays
-      </h2>
-      <div className="list-cards" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
-        {buildings.map(b => (
-          <div
-            className="stay"
-            key={b.id}
+    <section className="page container" style={{ display: 'block' }}>
+
+  <div style={{ width: '100%', textAlign: 'center', marginBottom: '30px' }}>
+    <h2 style={{ fontSize: '28px', fontWeight: '600', color: '#333', margin: '0' }}>
+      Hotels and Stays
+    </h2>
+  </div>
+
+  
+  <div
+    className="list-cards"
+    style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center', 
+      gap: '20px'
+    }}
+  >
+    {buildings.map((b) => (
+      <div
+        key={b.id}
+        className="stay"
+        style={{
+          width: '250px',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          overflow: 'hidden',
+          textAlign: 'center',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+        }}
+      >
+        <div
+          className="stay-img"
+          style={{
+            backgroundImage: `url(${b.img})`,
+            height: '180px',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="stay-body" style={{ padding: '10px' }}>
+          <h3 style={{ margin: '10px 0', fontSize: '18px', color: '#222' }}>{b.name}</h3>
+          <p style={{ margin: '5px 0', color: '#555', fontWeight: '500' }}>{b.price}</p>
+          <button
+            onClick={() => handleViewDetails(b)}
             style={{
-              width: '250px',
-              border: '1px solid #ddd',
-              borderRadius: '8px',
-              overflow: 'hidden',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+              padding: '8px 16px',
+              border: 'none',
+              background: '#007bff',
+              color: '#fff',
+              borderRadius: '4px',
+              cursor: 'pointer'
             }}
           >
-            <div
-              className="stay-img"
-              style={{
-                backgroundImage: `url(${b.img})`,
-                height: '180px',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            />
-            <div className="stay-body" style={{ padding: '10px' }}>
-              <h3 style={{ margin: '10px 0', fontSize: '18px', color: '#222' }}>{b.name}</h3>
-              <p className="price" style={{ margin: '5px 0', color: '#555', fontWeight: '500' }}>{b.price}</p>
-              <button
-                className="btn"
-                onClick={() => handleViewDetails(b)}
-                style={{
-                  padding: '8px 16px',
-                  border: 'none',
-                  background: '#007bff',
-                  color: '#fff',
-                  borderRadius: '4px',
-                  cursor: 'pointer'
-                }}
-              >
-                View Details
-              </button>
-            </div>
-          </div>
-        ))}
+            View Details
+          </button>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   );
 }

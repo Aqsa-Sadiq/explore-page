@@ -1,24 +1,29 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainNavbar from './Navbar';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Weather from './pages/Weather';
-import Building from './pages/Building';
-import Nearby from './pages/Nearby';
-import Nature from './pages/Nature';
-import BuildingDetail from './pages/BuildingDetail';
-import TravelHero from './TravelHero';   
-import Footer from './Footer';
-import BottomBar from './BottomBar';
+
+import Navbar from './components/layout/Navbar';
+import TravelHero from './components/layout/TravelHero';
+import BottomBar from './components/layout/BottomBar';
+import Navlinks from './components/Navlinks';
+import Footer from './components/layout/Footer';
+
+import Home from './components/pages/Home';
+import Weather from './components/pages/Weather';
+import Building from './components/pages/Building';
+import BuildingDetail from './components/pages/BuildingDetail';
+import Nearby from './components/pages/Nearby';
+import Nature from './components/pages/Nature';
 
 export default function App() {
   return (
     <div className="app">
-        <MainNavbar/>
-         <TravelHero />
-         <BottomBar/>
       <Navbar />
+      <TravelHero />
+  
+
+      <BottomBar />
+       <Navlinks />
+
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +34,6 @@ export default function App() {
           <Route path="/nature" element={<Nature />} />
         </Routes>
 
-       
         <Footer />
       </main>
     </div>

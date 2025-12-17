@@ -28,27 +28,44 @@ export default function Nearby() {
   const usdToPkr = 300; 
 
   return (
-    <section className="page container">
-      <h2>Nearby Stays (close to airport)</h2>
-      <div className="list">
-        {nearby.map(n => (
-          <div 
-            key={n.id} 
-            className="list-item" 
-            style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', borderBottom: '1px solid #ddd' }}
-          >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <strong>{n.name}</strong>
-              <div className="muted" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <FaMapMarkerAlt color="#e74c3c" /> {n.dist} away
-              </div>
-            </div>
-            <div className="price" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <FaMoneyBillWave color="#27ae60" /> PKR {n.price * usdToPkr}/night
-            </div>
+   <section className="page container" style={{ display: 'block' }}>
+ 
+  <div style={{ width: '100%', textAlign: 'center', marginBottom: '20px' }}>
+    <h2 style={{ fontSize: '26px', fontWeight: '600', color: '#333', margin: 0 }}>
+      Nearby Stays (close to airport)
+    </h2>
+  </div>
+
+
+  <div className="list" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+    {nearby.map(n => (
+      <div
+        key={n.id}
+        className="list-item"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '10px',
+          borderBottom: '1px solid #ddd',
+          borderRadius: '6px',
+          background: '#fff',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <strong>{n.name}</strong>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
+            <FaMapMarkerAlt color="#e74c3c" /> {n.dist} away
           </div>
-        ))}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: '500' }}>
+          <FaMoneyBillWave color="#27ae60" /> PKR {n.price * usdToPkr}/night
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   );
 }

@@ -2,7 +2,8 @@
 import "./footer.css";
 import { QrcodeOutlined } from "@ant-design/icons";
 import { Form, Input, Button } from "antd";
-import globeImg from "./assets/globe.png"
+import globe from '../../assets/globe.png';
+
 
 
 export default function Footer() {
@@ -24,7 +25,7 @@ export default function Footer() {
           eiusmod tempor incididunt ut labore et dolore.
         </p>
         <img
-          src={globeImg} alt="flight world" className="flight-image"
+          src={globe} alt="flight world" className="flight-image"
         />
       </div>
 

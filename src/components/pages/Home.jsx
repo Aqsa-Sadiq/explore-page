@@ -1,5 +1,7 @@
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../Card';
+
+
 import './Home.css';
 
 
@@ -33,6 +35,7 @@ const cards = [
 export default function Home() {
   return (
     <section className="home container">
+    
       <h2 className="section-title">Welcome — Choose a service</h2>
       <div className="cards-grid">
         {cards.map((c) => (
